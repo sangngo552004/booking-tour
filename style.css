@@ -28,33 +28,27 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    height : 80px;
     width: 100%;
     display: flex; /* Sắp xếp logo, links, button theo hàng ngang */
-    align-items: center;
-    justify-content: center; 
+     align-items: center;
+    /* justify-content:  center;  */ 
+    
     transition: background-color 0.3s;
-    z-index: 2;
+    z-index: 10;
     border-bottom: 2px solid white;
-    gap: 80px;
+   
 }
-
-.navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-bottom: 00px ;
-}
-
-/* Logo */
-.logo {
-    width: 80px; /* Nhỏ hơn vì nằm trong navbar */
-    height: auto;
-}
-
 /* Nhóm các link */
 .nav-links {
     display: flex;
-    gap: 20px; /* Khoảng cách giữa các link */
+    gap: 70px;
+    
+     /* Khoảng cách giữa các link */
 }
-
+.nav-left{
+    padding: 250px 200px;
+}
 .navbar a {
     color: white;
     text-decoration: none;
@@ -67,18 +61,433 @@ body {
 
 }
 
-/* Button */
-.hero-button {
-    padding: 8px 16px; /* Nhỏ hơn để vừa navbar */
-    font-size: 14px;
-    color: white;
-    background-color: rgb(99, 171, 69);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 00px ;
 }
 
-.hero-button:hover {
+/* Logo */
+.logo {
+    height:70px;
+    width: 140px; /* Nhỏ hơn vì nằm trong navbar */
+}
+
+
+.rounded-btn:hover {
     background-color: #e6b800;
 }
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Căn giữa cả chiều ngang và dọc */
+    text-align: center; /* Căn giữa chữ trong h1 */
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 4rem; 
+    text-transform: uppercase; /* Chữ in hoa */
+    color :  white
+}
+.rounded-btn {
+    background-color:  rgb(99, 171, 69);
+    font-family: Prompt ;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px; /* Bo tròn */
+    cursor: pointer;
+    transition: 0.3s;
+}
+.rounded-slt {
+    background-color:  white;
+    font-family: Prompt ;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid grey ;
+    padding: 12px 40px;
+    font-size: 16px;
+    border-radius: 25px; /* Bo tròn */
+    cursor: pointer;
+    transition: 0.3s;
+}
+.filter-box {
+    display: flex; /* Kích hoạt Flexbox */
+    justify-content: space-evenly; /* Căn đều theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    width: 100%; /* Đảm bảo phần tử chiếm hết chiều rộng */
+    padding: 10px;
+}
+
+.filter-box {
+    position: absolute; /* Cố định vị trí */
+    top: 100%; /* Đẩy nó xuống gần hết ảnh */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Dịch chuyển lại để căn giữa */
+    width: 70%; /* Độ rộng theo nhu cầu */
+    background: white; /* Màu nền */
+    padding: 40px;
+    border-radius: 12px; /* Bo góc */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    z-index: 3; /* Hiển thị trên ảnh */
+    opacity: 0; /* Ban đầu ẩn */
+    pointer-events: none; /* Không click được khi ẩn */
+}
+
+.filter-box.show {
+    opacity: 1;
+    pointer-events: all; /* Khi hiện thì có thể click */
+}
+
+.social-icons {
+    padding-left: 250px;
+    display: flex; /* Xếp icon theo hàng ngang */
+    align-items: center;
+    justify-content: center; /* Căn giữa icon */
+    gap: 30px;
+     /* Khoảng cách giữa icon */
+}
+/* .social-icons button{
+    margin-right: 200px;;
+} */
+.social-icons i {
+    font-size: 24px; /* Kích thước icon */
+    color: white; /* Màu trắng */
+    transition: 0.3s;
+    
+}
+
+.social-icons i:hover {
+    color: rgb(99, 171, 69); /* Đổi màu nhẹ khi hover */
+}
+
+.filter-box.detail-tour {
+    width: 90%;
+}
+
+.pop-des{
+    display: flex;
+    padding-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+   
+}
+.container-des {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.tour-count {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color:rgb(99, 171, 69); ;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.view-tours {
+    color: rgb(99, 171, 69); 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.view-tours:hover {
+    text-decoration: underline;
+}
+/* Ẩn nội dung ban đầu */
+.hidden-content {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hidden-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.hidden-content .view-tours {
+    color: rgb(99, 171, 69);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.hidden-content .view-tours:hover {
+    text-decoration: underline;
+}
+
+/* Hiển thị nội dung khi hover */
+.card:hover .hidden-content {
+    opacity: 1;
+}
+/* Large Card (Western Europe) */
+.large-card {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.large-card h2 {
+    font-size: 32px;
+}
+
+.large-card img {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card1  {
+    background-color: white;
+    position: relative;
+    width: 300px;
+    border-radius: 15px; /* Bo góc cho card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card1:hover {
+    transform: translateY(-5px);
+}
+
+.card1 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.best-seller {
+    background-color: rgb(99, 171, 69);
+    top: 1%;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+    margin: 10px;
+    border-radius: 5px; /* Bo góc cho nhãn "Best Seller" */
+    
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.details .duration::before {
+    content: "🕒 ";
+}
+
+.details .rating {
+    color: rgb(99, 171, 69);
+}
+
+.price {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.original-price {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.discounted-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(99, 171, 69);
+}
+
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Call Us Section */
+.footer-section .fas {
+    color: #ff4d4d;
+    margin-right: 5px;
+}
+
+.footer-section p:nth-child(2) {
+    color: #ff4d4d;
+    margin-bottom: 15px;
+}
+
+/* Payment Icons */
+.payment-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.payment-icons img {
+    height: 30px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icons p {
+    margin-right: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ff4d4d;
+}
+
+@media (max-width: 768px) {
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+
+
