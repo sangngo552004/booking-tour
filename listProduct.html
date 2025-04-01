@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar scrolled">
+            <div class="nav-left"><a href="#"><img src="/assets/images/dulichviet2.png" alt="Logo" class="logo"></a></div>
+            <!-- Logo trong navbar -->
+            <div class="nav-links"> <!-- Nhóm các link -->
+                <a href="#">Trang chủ</a>
+                <a href="#">Blog</a>
+                <a href="#">Giới thiệu</a>
+                <a href="#"><i class="fa fa-search"></i></a>
+            </div>
+            
+            <!-- Button trong navbar -->
+            <div class="social-icons">
+                
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            
+        </div>
+    </header>
+
+    <div style="height: 80px;;"></div>
+    <div class="container-lt">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2 class="search-title">Tìm kiếm</h2>
+            
+            <!-- Keywords -->
+            <div class="filter-section">
+                <label for="searchInput">Từ khóa</label>
+                <div class="search-input">
+                    <input type="text" id="searchInput" placeholder="Nhập tên tour...">
+                    <span class="search-icon">🔍</span>
+                </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="filter-section">
+                <label>Danh mục</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Our Recommendation</label>
+                    <label><input type="checkbox"> Popular Deals</label>
+                    <label><input type="checkbox"> Top One Day Tour</label>
+                    <label><input type="checkbox"> Top Vacation Tours</label>
+                </div>
+            </div>
+
+            <!-- Duration -->
+            <div class="filter-section">
+                <label for="duration">Duration</label>
+                <select id="duration">
+                    <option>Any</option>
+                    <option>1 Day</option>
+                    <option>3 Days</option>
+                    <option>5 Days</option>
+                    <option>7+ Days</option>
+                </select>
+            </div>
+            <div class="filter-section">
+                <label for="duration">Duration</label>
+                <select id="duration">
+                    <option>Any</option>
+                    <option>1 Day</option>
+                    <option>3 Days</option>
+                    <option>5 Days</option>
+                    <option>7+ Days</option>
+                </select>
+            </div>
+            <div class="filter-section">
+                <label for="duration">Duration</label>
+                <select id="duration">
+                    <option>Any</option>
+                    <option>1 Day</option>
+                    <option>3 Days</option>
+                    <option>5 Days</option>
+                    <option>7+ Days</option>
+                </select>
+            </div>
+            <!-- Price Range -->
+            <div class="filter-section">
+                <div class="price-range">
+                    <div class="price-input">
+                        <label for="min-price">Min Price</label>
+                        <input type="number" id="min-price" placeholder="Min Price">
+                    </div>
+                    <div class="price-input">
+                        <label for="max-price">Max Price</label>
+                        <input type="number" id="max-price" placeholder="Max Price">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rating -->
+            <div class="filter-section">
+                <label>Rating</label>
+                <div class="rating-filter">
+                    <div class="star-rating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                    <span class="rating-text">or more</span>
+                </div>
+            </div>
+
+            <!-- Clear Filter -->
+            <div class="filter-section">
+                <button class="clear-filter">Clear Filter</button>
+            </div>
+            <div  style="padding-left: 50px;">
+                <button class ="rounded-btn">Tìm kiếm</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="content-header">
+                <div class="sort-options">
+                    <label>Sắp xếp bằng: </label>
+                    <select>
+                        <option>Ngày khởi hành</option>
+                        <option>Giá</option>
+                        <option>Đánh giá</option>
+                    </select>
+                    <select>
+                        <option>Giảm dần</option>
+                        <option>Tăng dần</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Tour List -->
+            <div class="tour-list">
+                <div class="tour-card">
+                    <img src="assets/images/phuyen.jpg" alt="Hawaii">
+                    <div class="tour-info">
+                        <h3>QUY NHƠN - PHÚ YÊN – ĐẢO KỲ CO – EO GIÓ - 3 NGÀY 2 ĐÊM</h3>
+                        <div class="tour-details">
+                            <span class="availability"><i class="fa-solid fa-tag"></i> Mã Tour: ND123456</span>
+                            <span class="duration"><i class="fa-solid fa-clock"></i> 3 Ngày 2 Đêm</span>
+                            <span class="availability"><i class="fa-solid fa-calendar-days"></i> Khởi hành: <button>16/01</button>  <button>16/02</button></span>
+                            <span class="availability"><i class="fa-solid fa-van-shuttle"></i> Phương tiện: Ô tô </span>
+                            
+                        </div>
+                        <div >
+                            <p><b>Địa điểm: </b><a href="/destination/da-nang" class="des">Quy Nhơn</a> ,
+                                <a href="/destination/nha-trang" class="des">Phú Yên</a>,
+                    
+                        </div>
+                        <div class="tour-footer">
+                            <div class="price">Giá từ:  <b>3.500.000Đ</b></div>
+                            <div class="rating">★★★★★ (1 Review)</div>
+                            <button class="rounded-btn">Xem chi tiết</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Thêm các tour khác nếu cần -->
+                <div class="tour-card">
+                    <img src="assets/images/cauvang.jpg" alt="Hawaii">
+                    <div class="tour-info">
+                        <h3>HÀNH TRÌNH DI SẢN: ĐÀ NẴNG - SƠN TRÀ - HỘI AN - BÀ NÀ - HUẾ</h3>
+                        <div class="tour-details">
+                            <span class="availability"><i class="fa-solid fa-tag"></i> Mã Tour: ND18956</span>
+                            <span class="duration"><i class="fa-solid fa-clock"></i> 4 Ngày 3 Đêm</span>
+                            <span class="availability"><i class="fa-solid fa-calendar-days"></i> Khởi hành: <button>16/01</button>  <button>16/02</button></span>
+                            <span class="availability"><i class="fa-solid fa-van-shuttle"></i> Phương tiện: Ô tô </span>
+                            
+                        </div>
+                        <div >
+                            <p><b>Địa điểm: </b><a href="/destination/da-nang" class="des">Đà Nẵng</a> ,
+                                <a href="/destination/nha-trang" class="des">Sơn Trà</a>,
+                                <a href="/destination/nha-trang" class="des">Hội An</a>,
+                                <a href="/destination/nha-trang" class="des">Bà Nà</a>,
+                                <a href="/destination/nha-trang" class="des">Huế</a> </p>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="price">Giá từ:  <b>4.500.000Đ</b></div>
+                            <div class="rating">★★★★★ (1 Review)</div>
+                            <button class="rounded-btn">Xem chi tiết</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <img src="assets/images/nhatrang.jpg" alt="Hawaii">
+                    <div class="tour-info">
+                        <h3>DU LỊCH NHA TRANG - DU NGOẠN 4 ĐẢO - VINWONDERS - THÁP BÀ PONAGAR - NHÀ THỜ ĐÁ TỪ 4N3D</h3>
+                        <div class="tour-details">
+                            <span class="availability"><i class="fa-solid fa-tag"></i> Mã Tour: ND123456</span>
+                            <span class="duration"><i class="fa-solid fa-clock"></i> 5 Ngày 4 Đêm</span>
+                            <span class="availability"><i class="fa-solid fa-calendar-days"></i> Khởi hành: <button>16/01</button>  <button>16/02</button></span>
+                            <span class="availability"><i class="fa-solid fa-plane"></i> Phương tiện: Máy bay </span>
+                            
+                        </div>
+
+                        <div >
+                            <p>Địa điểm: <a href="/destination/nha-trang" class="des">Nha Trang</a></p>
+                        </div>
+                        <div class="tour-footer">
+        
+                            <div class="price">Giá từ:  <b>6.500.000Đ</b></div>
+                            <div class="rating">★★★★★ (1 Review)</div>
+                            <button class="rounded-btn">Xem chi tiết</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <img src="assets/images/kico.jpg" alt="Hawaii">
+                    <div class="tour-info">
+                        <h3>DU LỊCH QUY NHƠN - PHÚ YÊN - 4 NGÀY 3 ĐÊM</h3>
+                        <div class="tour-details">
+                            <span class="availability"><i class="fa-solid fa-tag"></i> Mã Tour: ND6789</span>
+                            <span class="duration"><i class="fa-solid fa-clock"></i> 4 Ngày 3 Đêm</span>
+                            <span class="availability"><i class="fa-solid fa-calendar-days"></i> Khởi hành: <button>22/01</button>  <button>18/02</button></span>
+                            <span class="availability"><i class="fa-solid fa-van-shuttle"></i> Phương tiện: Ô tô </span>
+                            
+                        </div>
+                        <div >
+                            <p><b>Địa điểm: </b><a href="/destination/da-nang" class="des">Quy Nhơn</a> ,
+                                <a href="/destination/nha-trang" class="des">Phú Yên</a>,
+                    
+                        </div>
+                        <div class="tour-footer">
+                            <div class="price">Giá từ:  <b>4.500.000Đ</b></div>
+                            <div class="rating">★★★★★ (1 Review)</div>
+                            <button class="rounded-btn">Xem chi tiết</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn" disabled>&lt;</button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">&gt;</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Call Us Section -->
+            <div class="footer-section">
+                <h3>Liên lạc</h3>
+                <p><i class="fas fa-phone"></i> 123-456-789</p>
+                <h3>Email</h3>
+                <p>dulichviet@gmail.com</p>
+            </div>
+
+            <!-- About Us Section -->
+            <div class="footer-section">
+                <h3>Địa chỉ</h3>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-location-dot"></i> HCM: 215 Nam Kỳ Khởi Nghĩa, Võ Thị Sáu, Q3 </a></li>
+                    <li><a href="#"><i class="fa-solid fa-location-dot"></i> HN: số 2 Chương Dương Độ, P.Chương Dương, Q.Hoàn Kiếm</a></li>
+                    <li><a href="#"><i class="fa-solid fa-location-dot"></i>Cần Thơ: P. Tân An, Q. Ninh Kiều, TP. Cần Thơ.</a></li>
+                </ul>
+            </div>
+
+            <!-- Support Section -->
+            <div class="footer-section">
+                <h3>Hỗ trợ</h3>
+                <ul>
+                    <li><a href="#">Từ 7h-22h (T2 - T7)</a></li>
+                    
+                </ul>
+            </div>
+
+        
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Đặt Tour. Mọi trải nghiệm của bạn đều xứng đáng.</p>
+            <div class="social-icons">
+                <p>Follow Us</p>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
